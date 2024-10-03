@@ -1,0 +1,5 @@
+<h1>All Authors </h1>
+
+{% for author in authors %}
+    <h2><a href="{% url 'author_detail' author.pk %}">{{ author.name }} {{ author.surname }}</a></h2>
+    {% endfor %}
