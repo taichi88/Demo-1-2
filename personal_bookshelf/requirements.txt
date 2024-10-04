@@ -1,0 +1,6 @@
+Django==4.2.11
+djangorestframework==3.14.0  # Add this if using Django REST framework
+requests==2.31.0              # If your app makes HTTP requests
+Pillow==10.2.0                # For image handling
+Pygments==2.17.2              # If using syntax highlighting
+

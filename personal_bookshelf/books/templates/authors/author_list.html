@@ -1,5 +1,18 @@
-<h1>All Authors </h1>
 
-{% for author in authors %}
-    <h2><a href="{% url 'author_detail' author.pk %}">{{ author.name }} {{ author.surname }}</a></h2>
+
+{% extends 'base.html' %}
+
+{%block content%}
+
+<h1 class='text-center'>Author</h1>
+    {% for author in authors %}
+        <div clas="card mb-3">
+            <div class="card-body">
+                <h2 class="card-title"><a href="{% url 'author_detail' author.pk%}">{{author.name}} {{author.lastname}}</a></h2>
+            </div>
+        </div>
+    {%empty%}
+        <p>No authors available.</p>
     {% endfor %}
+{%endblock%}
+

@@ -11,6 +11,8 @@ class AuthorForm(forms.ModelForm):
 
     
 class BookForm(forms.ModelForm):
+    #ეს release_date იმისთვის რომ ძაან მარტივად რომ ჩამოშალოს დეითI ხელით რომ არმოგვიწიოს შეყვანა
+    release_date = forms.DateField(widget=forms.DateInput(attrs={'type': 'date'})) 
     class Meta:
         model = Book
 
